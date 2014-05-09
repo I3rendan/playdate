@@ -1,12 +1,79 @@
 @import 'reset'
 @import 'variables'
 
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600)
+
+*, *:before, *:after 
+	-moz-box-sizing: border-box 
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+
+html
+	height: 100%
+
 body
 	background: $color-bg
+	height: 100%
+	overflow: hidden
+	font-family: "Josefin Slab", serif
 
 header
-	position: relative
+	position: absolute
 	z-index: 3
+	left: 0
+	top: 0
+	height: 100%
+	width: $header-width
+	background: transparentize($color-primary-dark, 0.08)
+	box-shadow: 1px 0 3px rgba(0,0,0,0.15)
+
+	nav
+		padding-top: 0.25rem
+
+		li
+			color: $color-primary-light
+			font-size: 1.5rem
+			font-weight: 300
+			margin-left: 1.5rem
+			border-bottom: 1px dotted transparentize($color-primary, 0.5)
+			padding: 2.33rem 0.67rem 0.67rem 0
+			cursor: pointer
+			transition: color $trans-speed ease
+
+			&:hover
+				color: $color-white
+
+	.wrap-logo
+		background: $color-primary
+		text-align: center
+		padding: 1.5rem 0
+		position: relative
+
+		img
+			height: 6rem
+			width: auto
+
+.wrap-title
+	position: absolute
+	left: $header-width
+	background: transparentize($color-white, 0.10)
+	padding: 1.25rem 3.33rem
+	z-index: 2
+	color: $color-primary-dark
+	border-radius: 0 2rem 2rem 0
+	top: 2rem
+	border: 1px solid $color-white
+
+	p
+		font-weight: 600
+		font-size: 2.75rem
+		line-height: 1
+		text-transform: uppercase
+
+		.title-slim
+			font-weight: 300
+			margin-left: 0.33rem
+			color: $color-primary
 
 .container
 	position: relative
@@ -21,6 +88,7 @@ header
 	z-index: 1
 
 	img
-		width: 100%
+		width: auto
 		height: auto
-		opacity: 0.78
+		min-height: 100%
+		min-width: 100%
