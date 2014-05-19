@@ -14,7 +14,7 @@ html
 body
 	background: $color-bg
 	height: 100%
-	overflow: hidden
+	overflow-x: hidden
 	font-family: "Josefin Slab", serif
 
 header
@@ -36,7 +36,7 @@ header
 			font-weight: 300
 			margin-left: 1.5rem
 			border-bottom: 1px dotted transparentize($color-primary, 0.5)
-			padding: 2.33rem 0.67rem 0.67rem 0
+			padding: 2.25rem 0.67rem 0.67rem 0
 			cursor: pointer
 			transition: color $trans-speed ease
 
@@ -46,7 +46,7 @@ header
 	.wrap-logo
 		background: $color-primary
 		text-align: center
-		padding: 1.5rem 0
+		padding: 1.25rem 0
 		position: relative
 
 		img
@@ -61,7 +61,7 @@ header
 	z-index: 2
 	color: $color-primary-dark
 	border-radius: 0 2rem 2rem 0
-	top: 2rem
+	top: 1.75rem
 	border: 1px solid $color-white
 
 	p
@@ -77,7 +77,22 @@ header
 
 .container
 	position: relative
-	z-index: 2
+	z-index: 4
+	height: 100%
+	width: 100% - $header-width
+	min-height: 50rem
+	margin-left: $header-width
+
+	.body-content
+		width: 67%
+		height: 57.5%
+		position: absolute
+		right: 7.5%
+		bottom: 7.5%
+		background: rgba(255,255,255,0.85)
+		border-radius: 1.5rem
+		border: 1px solid $color-white
+		box-shadow: 0 2px 4px rgba(0,0,0,0.15)
 
 .bg-imgs
 	position: absolute
@@ -86,9 +101,15 @@ header
 	top: 0
 	left: 0
 	z-index: 1
+	overflow: hidden
 
 	img
 		width: auto
 		height: auto
 		min-height: 100%
 		min-width: 100%
+
+@media screen and (max-width: $break-large)
+	header
+		nav
+			display: none
