@@ -15,6 +15,7 @@
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <!-- endbuild -->
   </head>
   <body ng-app="playdateApp">
@@ -32,16 +33,20 @@
 
       </div>
 
-      <nav id="main-nav">
+      <nav id="main-nav" ng-click="navOn = !navOn">
 
-      <ul>
-        <li>about us</li>
-        <li>events</li>
-        <li>sponsors</li>
-        <li>get involved</li>
-        <li>blog</li>
-        <li>contact</li>
-      </ul>
+        <div class="menu-toggle">
+          <span class="icon icon-list"></span>
+        </div>
+
+        <ul ng-class="{'active':navOn == true}">
+          <li><a href="about">about us</a></li>
+          <li><a href="events">events</a></li>
+          <li><a href="sponsors">sponsors</a></li>
+          <li><a href="get-involved">get involved</a></li>
+          <li><a href="blog">blog</a></li>
+          <li><a href="contact">contact</a></li>
+        </ul>
 
       </nav>
 
@@ -90,6 +95,13 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/home.controller.js"></script>
+        <!--<script src="scripts/controllers/about.controller.js"></script>
+        <script src="scripts/controllers/events.controller.js"></script>
+        <script src="scripts/controllers/sponsors.controller.js"></script>
+        <script src="scripts/controllers/get-involved.controller.js"></script>
+        <script src="scripts/controllers/blog.controller.js"></script>
+        <script src="scripts/controllers/contact.controller.js"></script>-->
         <!-- endbuild -->
 </body>
 </html>
