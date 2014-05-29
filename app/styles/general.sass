@@ -47,9 +47,20 @@ header
 			font-weight: 300
 			margin-left: 1.5rem
 			border-bottom: 1px dotted transparentize($color-primary, 0.5)
-			padding: 2.25rem 0.67rem 0.67rem 0
 			cursor: pointer
 			transition: color $trans-speed ease
+			display: block
+
+			a
+				width: 100%
+				padding: 2.25rem 0.67rem 0.67rem 0
+				display: inline-block
+
+			&.active 
+				border-color: transparentize($color-white, 0.5)
+
+				a
+					color: $color-white
 
 			&:hover
 				color: $color-white
@@ -177,9 +188,11 @@ header
 					opacity: 1
 
 				li
-					padding: 1rem 2rem 1rem 1rem
 					margin: 0
 					font-size: 1.25rem
+
+					a
+						padding: 1rem 2rem 1rem 1rem
 
 		.wrap-logo
 			padding: 0.5rem 0 0.25rem
