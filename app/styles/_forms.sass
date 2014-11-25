@@ -1,0 +1,59 @@
+@import variables
+
+.btn
+	display: block
+	background: $color-primary
+	padding: 1em
+	color: $color-white
+	text-align: center
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.08)
+	cursor: pointer
+	transition: background ease $trans-speed
+	font-family: "Source Sans Pro", sans-serif
+
+	&:hover
+		background: darken($color-primary, 10%)
+
+	&.btn-secondary
+		background: $color-secondary
+
+		&:hover
+			background: darken($color-secondary, 10%)
+
+	&.btn-secondary-light
+		background: lighten($color-secondary, 15%)
+
+		&:hover
+			background: lighten($color-secondary, 25%)
+
+	&.btn-join
+		display: table-cell
+		border-radius: 50%
+		font-size: 1.25em
+		height: 1em
+		width: 2.5em
+		line-height: 1em
+		padding: 0
+		background: $color-accent
+		color: darken($color-secondary, 15%)
+
+.newletter-home 
+	display: table
+	padding: 2.5em 0 0
+	text-align: left
+
+input[type="text"]
+	border-radius: 1.5rem
+	display: block
+	font-size: 1.33em
+	padding: 0.33em 0.75em
+	border: 2px solid $color-white
+	background: fade-out($color-white,0.33)
+	font-family: "Source Sans Pro", sans-serif
+	line-height: 1.33em
+	width: 100%
+
+	&.newsletter-signup
+		display: table-cell
+		margin-right: 0.5em
+
