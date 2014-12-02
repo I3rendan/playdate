@@ -26,26 +26,32 @@
 		&:hover
 			background: lighten($color-secondary, 25%)
 
+	&.btn-accent
+		background: $color-accent
+		color: darken($color-secondary, 15%)
+
+		&:hover
+			background: darken($color-accent, 10%)
+
 	&.btn-join
 		display: table-cell
 		border-radius: 50%
-		font-size: 1.25em
+		font-size: 1.075em
 		height: 1em
-		width: 2.5em
+		width: 2.25em
 		line-height: 1em
-		padding: 0
-		background: $color-accent
-		color: darken($color-secondary, 15%)
+		padding: 0.5em
 
 .newletter-home 
 	display: table
 	padding: 2.5em 0 0
 	text-align: left
+	width: 100%
 
 input[type="text"]
 	border-radius: 1.5rem
 	display: block
-	font-size: 1.33em
+	font-size: 1.25em
 	padding: 0.33em 0.75em
 	border: 2px solid $color-white
 	background: fade-out($color-white,0.33)
@@ -55,5 +61,5 @@ input[type="text"]
 
 	&.newsletter-signup
 		display: table-cell
-		margin-right: 0.5em
+		width: 95%
 

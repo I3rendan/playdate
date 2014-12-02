@@ -1,0 +1,47 @@
+@import variables
+
+#about, #sponsors
+	h4
+		background: $color-primary
+		color: $color-white
+		padding: 0.75em
+		border-radius: 0.5em
+		margin: 1em 0 1.5em
+		font-size: 1.33em
+
+#sponsors
+	img.inline-img-left
+		max-width: 25%
+
+.expand-wrap
+	h2
+		cursor: pointer
+		transition: color ease $trans-speed
+
+		&:hover
+			color: $color-primary-light
+
+		.icon
+			font-size: 0.75em
+			background: $color-white
+			padding: 0.15em
+			text-align: center
+			border-radius: 50%
+			box-shadow: 0 1px 1px rgba(0,0,0,0.15)
+			margin-right: 0.75em
+
+	.expand-body
+		opacity: 0
+		height: 0
+		display: block
+		overflow: hidden
+		transition: all ease $trans-speed
+
+	&.expanded
+		h2
+			.icon:before
+				content: "\e601"
+
+		.expand-body
+			opacity: 1
+			height: auto

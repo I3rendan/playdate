@@ -10,9 +10,10 @@ angular.module('playdateApp')
 
 		$scope.navItems = [
 			{name: 'About', href: 'about'},
-			{name: 'Events', href: 'events'},
+			{name: 'Membership', href: 'get-involved'},
+			{name: 'Open Playdates', href: 'events'},
+			{name: 'Private Playdates', href: 'events'},
 			{name: 'Sponsors', href: 'sponsors'},
-			{name: 'Get Involved', href: 'get-involved'},
 			{name: 'Blog', href: 'blog'},
 			{name: 'Contact', href: 'contact'}
 		];
